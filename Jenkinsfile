@@ -8,7 +8,7 @@ node {
   stage('Remote SSH') {
     sshCommand remote: remote, command: "echo 'Hello From SERVER!!'"
   }
-  stage('Pull latest') {
+  stage('Pull Latest') {
     sshCommand remote: remote, command: "cd sample-cicd/sample-ci-cd-backend && git checkout develop && git pull"
   }
   stage('Build & Deploy') {
