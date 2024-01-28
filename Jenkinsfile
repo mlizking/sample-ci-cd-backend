@@ -6,6 +6,6 @@ node {
   remote.password = 'y2023-artcode@System'
   remote.allowAnyHosts = true
   stage('Remote SSH') {
-    sshCommand remote: remote, command: "cd sample-cicd/sample-ci-cd-backend && git branch && git fetch"
+    sshCommand remote: remote, command: "cd sample-cicd/sample-ci-cd-backend && git checkout develop && git pull && docker-compose up -d"
   }
 }
